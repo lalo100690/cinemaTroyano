@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CINEMA TROYANO</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>
+
+	<div id="toast"></div>
+
+	<div class="nav">
+		<h1>CINEMA<b> TROYANO</b></h1>
+		<button onclick="verCarrito()">
+			<img src="cart.png">
+			<div id="notificacion"></div>
+		</button>
+
+	</div>
+
+	<h1 class="titulo"><span>1</span>Lugar de estacionamiento</h1>
+
+	<select id="lugar" onchange="guardarLugar()">
+		<option>Busca tu lugar</option>
+	</select>
+
+
+	<h1 class="titulo"><span>2</span>Selecciona tus productos</h1>
+
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+    	<div class="combo">
+    		<div class="imagen"></div>
+			<h2>COMBO 1</h2>
+			<span>$230</span>
+
+			<p>Descripción del combo, aqui vienen todos los contenidos</p>
+			
+			<div class="cantidad">
+				<button onclick="addCombo1()">-</button>
+				<input type="text" id="cantCombo1" value="0" disabled>
+				<button onclick="restCombo1()">+</button>
+			</div>
+			<button class="pedir locked" id="pedirCombo1" onclick="addCarrito()">AGREGAR AL CARRITO</button>
+		</div>	
+    </div>
+    <div class="swiper-slide">
+    	<div class="combo">
+    		<div class="imagen"></div>
+			<h2>COMBO 2</h2>
+			<span>$230</span>
+
+			<p>Descripción del combo, aqui vienen todos los contenidos</p>
+			
+			<div class="cantidad">
+				<button onclick="addCombo2()">-</button>
+				<input type="text" id="cantCombo2" value="0" disabled>
+				<button onclick="restCombo2()">+</button>
+			</div>
+			<button class="pedir locked" id="pedirCombo2" onclick="addCarrito()">AGREGAR AL CARRITO</button>
+		</div>	
+    </div>
+    <div class="swiper-slide">
+    	<div class="combo">
+    		<div class="imagen"></div>
+			<h2>COMBO 3</h2>
+			<span>$230</span>
+
+			<p>Descripción del combo, aqui vienen todos los contenidos</p>
+			
+			<div class="cantidad">
+				<button onclick="addCombo3()">-</button>
+				<input type="text" id="cantCombo3" value="0" disabled>
+				<button onclick="restCombo3()">+</button>
+			</div>
+			<button class="pedir locked" id="pedirCombo3" onclick="addCarrito()">AGREGAR AL CARRITO</button>
+		</div>	
+    </div>
+  </div>
+</div>
+
+<script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 'auto',
+      spaceBetween: 30,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+
+  </script>
+
+  <script src="fun.js">
+  	
+  </script>
+
+  <script type="text/javascript">
+  	populateLugares();
+  </script>
+
+</body>
+</html>

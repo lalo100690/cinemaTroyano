@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CINEMA TROYANO</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>
+
+	<div id="toast"></div>
+
+	<div class="nav2">
+		
+		<button onclick="regresar()">
+			<img src="back.png">
+		</button>
+		<h1>CARRITO DE COMPRA</h1>
+	</div>
+
+	<h1 class="titulo">Conformación de pedido</h1>
+
+	<div class="pedido">
+		<h1>Tu estacionamiento: <span class="lugar"></span></h1>
+		<h1>Tus productos</h1>
+		<div class="productos">
+			
+		</div>
+		<div class="total">
+			<h2>TOTAL:</h2>
+			<h3 id="total"></h3>
+		</div>
+
+		<button class="hacerPedido" onclick="hacerPedido()">HACER PEDIDO</button>
+		<button class="cancelarPedido" onclick="cancelarPedido()">CANCELAR PEDIDO</button>
+	</div>
+
+
+
+  <script src="fun.js"></script>
+  <script>
+    loadPedido()
+  </script>
+
+</body>
+</html>
